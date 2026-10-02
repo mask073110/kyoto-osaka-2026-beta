@@ -161,59 +161,30 @@ const DAY_LOGISTICS=[
 "🚶 大阪自由移動日｜不為美食跨區；19:30 JST 保留退稅／採買提醒。",
 "✈️ 回程日｜09:30 退房・8 人行李集合 → 10:00 包車 → 11:00 KIX；報到、退稅／海關與安檢優先。"
 ];
-const POI_PHOTOS={"清水寺":"https://www.kiyomizudera.or.jp/assets/img/learn/mainhall/main_01.jpg","よーじや 清水店":"https://www.yojiya.co.jp/yojiya/wp-content/uploads/2026/05/%E6%B8%85%E6%B0%B4.jpg","七味家本舖":"https://www.shichimiya.co.jp/wp-content/themes/shichimiya/img/store-photo-001.jpg","伊藤軒 / SOU・SOU清水店":"https://www.sousou.co.jp/cdn/shop/files/mv_pc_itoken.jpg?v=1756104145&width=1600","日東堂":"","% ARABICA Higashiyama":"https://images.squarespace-cdn.com/content/v1/5cf7ddba98c8ee000167e0a5/1590070203952-R42XSZ31ZQTZQNNE6JYZ/Arabica-Kyoto-Higashiyama-01.jpg","かつくら寺町店":"https://www.katsukura.jp/wp-content/uploads/shop_teramachi.jpg","HUMAN MADE 1928 Cafe by Blue Bottle Coffee":"https://store.humanmade.jp/cdn/shop/files/HM1928_1.jpg","LE LABO Kyoto Machiya":"https://www.lelabofragrances.jp/media/export/cms/store/kyoto/kyoto_machiya.jpg","天ぷら圓堂 八坂本店":"https://celestine.endo.kyoto/wp-content/uploads/locations-yasaka-main.jpg","和牛料亭 bungo 祇園":"https://wagyuryotei-bungo.com/gion/wp-content/uploads/sites/2/2025/07/story_01.jpg"};Object.assign(POI_PHOTOS,{"りくろーおじさん":"https://www.rikuro.co.jp/wordpress/wp-content/uploads/2013/08/nanba_a.jpg","551 HORAI":"https://www.551horai.co.jp/asset/img/mail_order/img_1.jpg","杯麵博物館紀念品":"https://www.cupnoodles-museum.jp/uploads/2017/05/shop-detail-01.jpg"});Object.assign(POI_PHOTOS,{"出町ろろろ":"https://static.gltjp.com/glt/data/directory/14000/13195/20220708_095525_954f44c6_w640.webp"});Object.assign(POI_PHOTOS,{"3COINS 京都寺町店":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg","橋本亭・柚子咖啡":"https://minohkankou.net/wp-content/uploads/2025/01/hashimototei-3.jpg","KIX 最後採買・伴手禮":"https://www.kansai-airport.or.jp/sites/default/files/styles/scale_720/public/2023-09/KIX_DUTY_FREE.jpg"});Object.assign(POI_PHOTOS,{"TAPTAP Lab":"https://static.wixstatic.com/media/7c7d0e_4d2865fc49ab47d59f350f98006cd9d5~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,enc_avif,quality_auto/IMG_4100_JPG.jpg"});Object.assign(POI_PHOTOS,{"本家西尾八橋 清水店":"https://www.8284.co.jp/shop/img_shop/kiyomizu_01.jpg"});Object.assign(POI_PHOTOS,{
-"寺町京極商店街":"https://thumb.photo-ac.com/3a/3a3c7f3c9262c5b0bc3cc65d81e1a3db_w.jpeg",
-"金剛寺（八坂庚申堂）":"https://livedoor.blogimg.jp/chilnachilna7038/imgs/b/f/bfa76fdc-s.jpg",
-"安井金比羅宮":"https://www.datocms-assets.com/101439/1726124124-yasui-konpiragu-shrine.jpeg?auto=format&h=1000&w=1000",
-});Object.assign(POI_PHOTOS,{
-"京都ポルタ":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Porta.jpg?width=960",
-"京都站伴手禮區":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Porta.jpg?width=960",
-"京都站周邊晚餐":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Porta.jpg?width=960",
-"伏見稻荷參道":"https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20050416%20Fushimi%20005.jpg?width=960",
-"日本橋動漫・扭蛋":"https://commons.wikimedia.org/wiki/Special:FilePath/Den-Den%20Town%2C%20Nipponbashi%2C%20Osaka%20-%20Jul%2012%2C%202023.jpg?width=960",
-"大阪晚餐候選":"https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Dotonbori%20yoru.jpg?width=960"
-});Object.assign(POI_PHOTOS,{
-"NAMBA WALK":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+const POI_PHOTOS={
+"清水寺":"https://www.kiyomizudera.or.jp/assets/img/learn/mainhall/main_01.jpg",
+"よーじや 清水店":"https://www.yojiya.co.jp/yojiya/wp-content/uploads/2026/05/%E6%B8%85%E6%B0%B4.jpg",
+"七味家本舖":"https://www.shichimiya.co.jp/wp-content/themes/shichimiya/img/store-photo-001.jpg",
+"伊藤軒 / SOU・SOU清水店":"https://www.sousou.co.jp/cdn/shop/files/mv_pc_itoken.jpg?v=1756104145&width=1600",
+"% ARABICA Higashiyama":"https://images.squarespace-cdn.com/content/v1/5cf7ddba98c8ee000167e0a5/1590070203952-R42XSZ31ZQTZQNNE6JYZ/Arabica-Kyoto-Higashiyama-01.jpg",
+"かつくら寺町店":"https://www.katsukura.jp/wp-content/uploads/shop_teramachi.jpg",
+"HUMAN MADE 1928 Cafe by Blue Bottle Coffee":"https://store.humanmade.jp/cdn/shop/files/HM1928_1.jpg",
+"LE LABO Kyoto Machiya":"https://www.lelabofragrances.jp/media/export/cms/store/kyoto/kyoto_machiya.jpg",
+"天ぷら圓堂 八坂本店":"https://celestine.endo.kyoto/wp-content/uploads/locations-yasaka-main.jpg",
+"和牛料亭 bungo 祇園":"https://wagyuryotei-bungo.com/gion/wp-content/uploads/sites/2/2025/07/story_01.jpg",
+"りくろーおじさん":"https://www.rikuro.co.jp/wordpress/wp-content/uploads/2013/08/nanba_a.jpg",
+"551 HORAI":"https://www.551horai.co.jp/asset/img/mail_order/img_1.jpg",
 "551蓬莱 なんばウォーク店":"https://www.551horai.co.jp/wp-content/uploads/shop_nambawalk_01.jpg",
-"ビックカメラ なんば店":"https://commons.wikimedia.org/wiki/Special:FilePath/Bic%20Camera%20Namba.jpg?width=960",
-"ドン・キホーテ 道頓堀店":"https://commons.wikimedia.org/wiki/Special:FilePath/Don%20Quijote%20Dotonbori.jpg?width=960",
-"串かつてんぐ":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"新世界 かんかん｜章魚燒":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"鶏笑 新世界店｜唐揚炸雞":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"ジャンボ釣船 つり吉｜炭烤雪蟹":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"おにぎりごりちゃん 新世界店｜鮭魚籽飯糰":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"甘々堂 新世界ジャンジャン横丁｜超長串卡斯特拉":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
-"新世界おみやげもん横丁｜比利肯しあわせ焼":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960"
-});Object.assign(POI_PHOTOS,{
-"飯店／五条周邊":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Station%20Building.jpg?width=960",
-"五条周邊":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Station%20Building.jpg?width=960",
-"弘法市攤位":"https://commons.wikimedia.org/wiki/Special:FilePath/Toji%20Temple%2C%20Kyoto.jpg?width=960",
-"大阪飯店周邊晚餐":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsaibashi%20Osaka.jpg?width=960",
-"大阪飯店周邊採買":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsaibashi%20Osaka.jpg?width=960",
-"ピッコロカレーなんばウォーク店":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"Lattice なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"3COINS なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"久世福商店 なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"@cosmeSTORE/MiSUGI":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"tutuanna なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"無印良品500なんばウォーク一番街":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
-"KIX 出境前／後餐飲":"https://www.kansai-airport.or.jp/sites/default/files/styles/scale_720/public/2023-09/KIX_DUTY_FREE.jpg"
-});Object.assign(POI_PHOTOS,{
+"杯麵博物館紀念品":"https://www.cupnoodles-museum.jp/uploads/2017/05/shop-detail-01.jpg",
+"3COINS 京都寺町店":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
+"橋本亭・柚子咖啡":"https://minohkankou.net/wp-content/uploads/2025/01/hashimototei-3.jpg",
+"KIX 最後採買・伴手禮":"https://www.kansai-airport.or.jp/sites/default/files/styles/scale_720/public/2023-09/KIX_DUTY_FREE.jpg",
+"TAPTAP Lab":"https://static.wixstatic.com/media/7c7d0e_4d2865fc49ab47d59f350f98006cd9d5~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,enc_avif,quality_auto/IMG_4100_JPG.jpg",
+"本家西尾八橋 清水店":"https://www.8284.co.jp/shop/img_shop/kiyomizu_01.jpg",
 "Kichi Kichi Omurice キチ・キチ":"https://kichikichi.com/wp-content/uploads/2019/08/omuraisu.jpg",
 "星巴克 京都二寧坂Yasaka茶屋店":"https://www.starbucks.co.jp/assets/images/store/detail/1476/1.jpg"
-});Object.assign(POI_PHOTOS,{
-"GOKAGO":"https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-zaka%2C%20Kyoto.jpg?width=960",
-"どんぐり共和国 清水店":"https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-zaka%2C%20Kyoto.jpg?width=960",
-"AKANES 清水周邊":"https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-zaka%2C%20Kyoto.jpg?width=960",
-"Koto no Iroha 祇園店":"https://commons.wikimedia.org/wiki/Special:FilePath/Gion%20Kyoto.jpg?width=960",
-"HISEKI":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsaibashi%20Osaka.jpg?width=960",
-"ダイコクドラッグ 道頓堀店":"https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Dotonbori%20yoru.jpg?width=960",
-"ぱん士郎 なんば道頓堀店｜熊貓白可頌":"https://commons.wikimedia.org/wiki/Special:FilePath/Osaka%20Dotonbori%20yoru.jpg?width=960"
-});Object.assign(POI_PHOTOS,{
-"マツモトキヨシ 京都四条河原町店":"https://commons.wikimedia.org/wiki/Special:FilePath/Shijo%20Kawaramachi%2C%20Kyoto.jpg?width=960",
-"ROOT2 SEIKA TOJI":"https://commons.wikimedia.org/wiki/Special:FilePath/Toji%20Temple%2C%20Kyoto.jpg?width=960",
-"祢ざめ家":"https://commons.wikimedia.org/wiki/Special:FilePath/Japan%20050416%20Fushimi%20005.jpg?width=960"
-});function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
+};
+function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
 function stationItems(name){let k=stationKey(name),base=((STATION_NEARBY[day]||{})[k]||[]).map((x,i)=>({id:"b"+i,icon:x[0],type:stationType(x[1])||x[1],name:x[2],user:"行程整理",votes:null,link:POI_LINKS[x[2]]||""})),added=candidates.filter(x=>x.day===day&&x.station===k).map(x=>({id:x.id,icon:x.type==="food"?"🍴":x.type==="spot"?"📍":x.type==="rest"?"☕":x.type==="drug"?"💊":x.type==="gift"?"🎁":"🛍️",type:x.type,name:x.name,user:x.user||"團員新增",votes:x.votes,link:x.link||""}));return base.concat(added)}
 function stationInfo(x){if(x.votes!=null)return "";if(x.type==="food"){let f=FOOD_DETAIL[x.name],m=FOOD_META[x.name];if(f){let cls=f.video?" station-info-video":"";return '<div class="station-info'+cls+'"><span><strong>推薦</strong> '+esc(f.recommend||"待確認")+'</span><span><strong>價格</strong> '+esc((f.price||"待確認").replace(/^價格｜/,""))+'</span><span><strong>營業</strong> '+esc((f.hours||"待確認").replace(/^營業｜/,""))+'</span><span><strong>8人</strong> '+esc((f.group||"待確認").replace(/^8人｜/,""))+'</span></div>';} if(m)return '<div class="station-info"><span><strong>推薦</strong> '+esc(m[0]||"待確認")+'</span><span><strong>停留</strong> '+esc(m[1]||"待確認")+'</span><span><strong>8人</strong> '+esc(m[2]||"待確認")+'</span><span><strong>價格／營業</strong> 待確認</span></div>';return '<div class="station-info"><span><strong>推薦／價格／營業</strong> 待確認</span></div>'}let m=NEAR_META[x.name];if(m)return '<div class="station-info"><span><strong>推薦</strong> '+esc(m[0])+'</span><span><strong>位置／時間</strong> '+esc(m[1])+'・'+esc(m[2])+'</span></div>';return ""}
