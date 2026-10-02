@@ -183,7 +183,9 @@ const POI_PHOTOS={
 "TAPTAP Lab":"https://static.wixstatic.com/media/7c7d0e_4d2865fc49ab47d59f350f98006cd9d5~mv2.jpg/v1/fill/w_980,h_735,al_c,q_85,enc_avif,quality_auto/IMG_4100_JPG.jpg",
 "本家西尾八橋 清水店":"https://www.8284.co.jp/shop/img_shop/kiyomizu_01.jpg",
 "Kichi Kichi Omurice キチ・キチ":"https://kichikichi.com/wp-content/uploads/2019/08/omuraisu.jpg",
-"星巴克 京都二寧坂Yasaka茶屋店":"https://www.starbucks.co.jp/assets/images/store/detail/1476/1.jpg"
+"星巴克 京都二寧坂Yasaka茶屋店":"https://www.starbucks.co.jp/assets/images/store/detail/1476/1.jpg",
+"ビックカメラ なんば店":"https://www.biccamera.com/bc/include_cms_contents/shop/shoplist/outside/shop-013_20201227.jpg",
+"無印良品500なんばウォーク一番街":"https://www.muji.com/public/media/jp/img/store/article/_1_2147.jpg"
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
@@ -229,6 +231,7 @@ const SHOP_DETAIL={
 "HISEKI":{recommend:"飾品／硬幣戒指候選",price:"依店家方案／商品",hours:"心齋橋・長堀橋｜出發前確認",group:"8人若做體驗需確認同時接待量",route:"DAY5 心齋橋"},
 "KIX 最後採買・伴手禮":{recommend:"關西限定菓子／最後免稅採買",price:"依機場各店商品",hours:"完成報到、退稅／海關與安檢後再採買",group:"8人先完成登機手續再分流",route:"DAY6 KIX"}
 };const CONTACT_DETAIL={
+"tutuanna なんばウォーク":{web:"https://online.tutuanna.jp/shop/store/detail.aspx?store_id=33511100",phone:"090-9142-1257"},
 "どんぐり共和国 清水店":{web:"https://benelic.com/donguri/shop-list/",phone:"075-525-7170"},
 "日東堂":{web:"https://nittodo.jp/",phone:"075-525-8115"},
 "清水寺":{web:"https://www.kiyomizudera.or.jp/"},
@@ -241,7 +244,7 @@ const SHOP_DETAIL={
 "りくろーおじさん":{web:"https://www.rikuro.co.jp/shoplist/",phone:"0120-57-2132"},
 "ビックカメラ なんば店":{web:"https://www.biccamera.com/bc/i/shop/shoplist/shop013.jsp",phone:"06-6634-1111"},
 "杯麵博物館紀念品":{web:"https://www.cupnoodles-museum.jp/ja/osaka_ikeda/"},
-"無印良品500なんばウォーク一番街":{web:"https://www.muji.com/jp/ja/shop/detail/046912"},
+"無印良品500なんばウォーク一番街":{web:"https://www.muji.com/jp/ja/shop/detail/046912",phone:"06-4708-8797"},
 "星巴克 京都二寧坂Yasaka茶屋店":{web:"https://store.starbucks.co.jp/detail-1476/"},
 "本家西尾八橋 清水店":{web:"https://www.8284.co.jp/shop/kiyomizu.html",phone:"075-541-1677"},
 "天ぷら圓堂 八坂本店":{web:"https://www.gion-endo.com/",reserve:"https://www.gion-endo.com/reservation/",phone:"075-551-1488"},
