@@ -178,6 +178,20 @@ const POI_PHOTOS={"清水寺":"https://www.kiyomizudera.or.jp/assets/img/learn/m
 "おにぎりごりちゃん 新世界店｜鮭魚籽飯糰":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
 "甘々堂 新世界ジャンジャン横丁｜超長串卡斯特拉":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960",
 "新世界おみやげもん横丁｜比利肯しあわせ焼":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsekai%20Osaka.jpg?width=960"
+});Object.assign(POI_PHOTOS,{
+"飯店／五条周邊":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Station%20Building.jpg?width=960",
+"五条周邊":"https://commons.wikimedia.org/wiki/Special:FilePath/Kyoto%20Station%20Building.jpg?width=960",
+"弘法市攤位":"https://commons.wikimedia.org/wiki/Special:FilePath/Toji%20Temple%2C%20Kyoto.jpg?width=960",
+"大阪飯店周邊晚餐":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsaibashi%20Osaka.jpg?width=960",
+"大阪飯店周邊採買":"https://commons.wikimedia.org/wiki/Special:FilePath/Shinsaibashi%20Osaka.jpg?width=960",
+"ピッコロカレーなんばウォーク店":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"Lattice なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"3COINS なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"久世福商店 なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"@cosmeSTORE/MiSUGI":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"tutuanna なんばウォーク":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"無印良品500なんばウォーク一番街":"https://commons.wikimedia.org/wiki/Special:FilePath/Namba%20Walk.jpg?width=960",
+"KIX 出境前／後餐飲":"https://www.kansai-airport.or.jp/sites/default/files/styles/scale_720/public/2023-09/KIX_DUTY_FREE.jpg"
 });function stationPhoto(x){let u=POI_PHOTOS[x.name];return u?'<img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\'">':""}
 const POI_LINKS={"よーじや 清水店":"https://goo.gl/maps/mj1ZpumPsJ33froo9","七味家本舖":"https://goo.gl/maps/FdwHBdcnyBdi98198","伊藤軒 / SOU・SOU清水店":"https://goo.gl/maps/rky5XsaN3drShpUt8","清水寺":"https://goo.gl/maps/AN6ufrUvkQZ9Xndm6","日東堂":"https://goo.gl/maps/raRx7cmY4LN8SawF7","金剛寺（八坂庚申堂）":"https://goo.gl/maps/WVasdYsVfZExxJU19","安井金比羅宮":"https://goo.gl/maps/YoB76NrpmcemjFbb8","和牛料亭 bungo 祇園":"https://goo.gl/maps/7Y3heV38sD2qCSH37","寺町京極商店街":"https://goo.gl/maps/jTLQ5LUMxye9B7oD6","HUMAN MADE 1928 Cafe by Blue Bottle Coffee":"https://goo.gl/maps/T1HpBMDadYvRYfdg8","Kichi Kichi Omurice キチ・キチ":"https://goo.gl/maps/GAfrLiRf9VYqBKxD8","NAMBA WALK":"https://www.google.com/maps/search/?api=1&query=NAMBA%20WALK%20Osaka","551蓬莱 なんばウォーク店":"https://www.google.com/maps/search/?api=1&query=551%E8%93%AC%E8%8E%B1%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E5%BA%97","ピッコロカレーなんばウォーク店":"https://www.google.com/maps/search/?api=1&query=%E3%83%94%E3%83%83%E3%82%B3%E3%83%AD%E3%82%AB%E3%83%AC%E3%83%BC%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E5%BA%97","Lattice なんばウォーク":"https://www.google.com/maps/search/?api=1&query=Lattice%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF","3COINS なんばウォーク":"https://www.google.com/maps/search/?api=1&query=3COINS%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E5%BA%97","久世福商店 なんばウォーク":"https://www.google.com/maps/search/?api=1&query=%E4%B9%85%E4%B8%96%E7%A6%8F%E5%95%86%E5%BA%97%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E5%BA%97","@cosmeSTORE/MiSUGI":"https://www.google.com/maps/search/?api=1&query=%40cosmeSTORE%20MiSUGI%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF","tutuanna なんばウォーク":"https://www.google.com/maps/search/?api=1&query=tutuanna%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF","無印良品500なんばウォーク一番街":"https://www.google.com/maps/search/?api=1&query=%E7%84%A1%E5%8D%B0%E8%89%AF%E5%93%81500%20%E3%81%AA%E3%82%93%E3%81%B0%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E4%B8%80%E7%95%AA%E8%A1%97"};
 const STATION_NEARBY={
