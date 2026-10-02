@@ -260,6 +260,9 @@ const POI_PHOTOS={
 "伏見稻荷參道":"https://inari.jp/zh-tw/wp-content/uploads/2016/09/senbontorii.jpg",
 "箕面公園・瀑布":"https://minohkankou.net/wp-content/uploads/2024/12/201124_S3_2056.jpg",
 "箕面瀑布｜秋景":"https://minohkankou.net/wp-content/uploads/2024/12/201124_S3_2056.jpg",
+"寺町京極商店街":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
+"弘法市攤位":"https://live.staticflickr.com/65535/51473618820_a776a1407f_o.jpg",
+"KIX 出境前／後餐飲":"https://www.kansai-airport.or.jp/sites/default/files/styles/scale_720/public/2023-09/KIX_DUTY_FREE.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
