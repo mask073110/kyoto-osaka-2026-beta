@@ -77,7 +77,7 @@ function weatherAdvice(w){if(!w)return"維持原行程；接近出發日後會�
 async function loadWeather(){
  let box=document.getElementById("weatherBox");if(!box)return;
  let target=new Date("2026-"+DAYS[day].date.replace("/","-")+"T12:00:00+09:00"),now=new Date(),diff=(target-now)/86400000,c=WEATHER_CITY[day];
- if(diff>16){box.innerHTML='<b>🌤 '+c.name+'天氣</b><span>尚未進入逐日預報範圍｜出發前約16天開始自動顯示</span><small>'+weatherAdvice(null)+'</small>';return}
+ if(diff>5){box.innerHTML='<b>🌤 '+c.name+'天氣</b><span>尚未進入逐日預報範圍｜出發前約5天開始自動顯示</span><small>'+weatherAdvice(null)+'</small>';return}
  if(diff<-1){box.innerHTML='<b>🌤 '+c.name+'天氣</b><span>此行程日期已結束</span>';return}
  try{
   let date="2026-"+DAYS[day].date.replace("/","-"),u="https://api.open-meteo.com/v1/forecast?latitude="+c.lat+"&longitude="+c.lon+"&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&start_date="+date+"&end_date="+date;
