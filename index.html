@@ -214,6 +214,9 @@ const POI_PHOTOS={
 "四条河原町夜景":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Takashimaya_Kyoto.jpg/1280px-Takashimaya_Kyoto.jpg",
 "寺町・新京極街拍":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
 "寺町・新京極商店街":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
+"GOKAGO":"https://cdn.shopify.com/s/files/1/0731/4374/6881/files/img_comingLoop.png?v=1683680920",
+"鶏笑 新世界店｜唐揚炸雞":"https://site-images.hp.admin.can-ly.com/images/cms/managed/directories/8/2026021211482220260125063351torisho.webp",
+"新世界おみやげもん横丁｜比利肯しあわせ焼":"https://kokomo-yoshimoto.co.jp/res/images/202608/shinsekai_0826_1_v6.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
