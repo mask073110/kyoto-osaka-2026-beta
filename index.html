@@ -318,7 +318,12 @@ const SHOP_DETAIL={
 "本家西尾八橋 清水店":{web:"https://www.8284.co.jp/shop/kiyomizu.html",phone:"075-541-1677"},
 "天ぷら圓堂 八坂本店":{web:"https://www.gion-endo.com/",reserve:"https://www.gion-endo.com/reservation/",phone:"075-551-1488"},
 "和牛料亭 bungo 祇園":{web:"https://wagyuryotei-bungo.com/gion/",reserve:"https://wagyuryotei-bungo.com/gion/"},
-"% ARABICA Higashiyama":{web:"https://arabica.com/location/arabica-kyoto-higashiyama/"}
+"% ARABICA Higashiyama":{web:"https://arabica.com/location/arabica-kyoto-higashiyama/"},
+"ROOT2 SEIKA TOJI":{web:"https://root2-inc.com/service/hotel",phone:"075-661-3600"},
+"GOKAGO":{web:"https://gokago-kyoto.com/"},
+"祢ざめ家":{phone:"075-641-0802"},
+"出町ろろろ":{phone:"075-213-2772"},
+"ピッコロカレーなんばウォーク店":{web:"https://www.piccolo.ne.jp/?mode=f4",phone:"06-6213-0106"}
 };
 function contactRows(name){let c=CONTACT_DETAIL[name];if(!c)return '<span class="contact-none">官方聯絡資料未確認｜可使用下方 Maps 查詢最新資訊</span>';let a=[];if(c.web)a.push('<a class="contact-link" href="'+esc(c.web)+'" target="_blank" rel="noopener">🌐 官方網站</a>');if(c.reserve)a.push('<a class="contact-link reserve-link" href="'+esc(c.reserve)+'" target="_blank" rel="noopener">📅 預約／訂位</a>');if(c.phone)a.push('<a class="contact-link" href="tel:'+esc(c.phone.replace(/[^0-9+]/g,""))+'">☎ '+esc(c.phone)+'</a>');return '<div class="contact-actions">'+a.join("")+'</div>'}
 
