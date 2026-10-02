@@ -196,6 +196,10 @@ const POI_PHOTOS={
 "道頓堀":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg/1280px-Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg",
 "道頓堀｜藍調時刻":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg/1280px-Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg",
 "杯麵博物館 池田":"https://www.cupnoodles-museum.jp/uploads/2017/05/shop-detail-01.jpg",
+"下鴨神社・糺之森":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Tadasu_no_mori_200906c.jpg/1280px-Tadasu_no_mori_200906c.jpg",
+"糺之森｜林間人像":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Tadasu_no_mori_200906c.jpg/1280px-Tadasu_no_mori_200906c.jpg",
+"心齋橋・長堀橋":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/View_of_Shinsaibashi-suji_Shopping_Street_from_Ebisubashi_Bridge.jpg/1280px-View_of_Shinsaibashi-suji_Shopping_Street_from_Ebisubashi_Bridge.jpg",
+"心齋橋｜夜間人像":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/View_of_Shinsaibashi-suji_Shopping_Street_from_Ebisubashi_Bridge.jpg/1280px-View_of_Shinsaibashi-suji_Shopping_Street_from_Ebisubashi_Bridge.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
