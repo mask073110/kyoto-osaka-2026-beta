@@ -190,6 +190,7 @@ const POI_PHOTOS={
 "星巴克 京都二寧坂Yasaka茶屋店":"https://www.starbucks.co.jp/assets/images/store/detail/1476/1.jpg",
 "ビックカメラ なんば店":"https://www.biccamera.com/bc/include_cms_contents/shop/shoplist/outside/shop-013_20201227.jpg",
 "無印良品500なんばウォーク一番街":"https://www.muji.com/public/media/jp/img/store/article/_1_2147.jpg"
+"新世界｜復古街拍":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Shinsekai_and_Tsutenkaku_Tower.jpg/1280px-Shinsekai_and_Tsutenkaku_Tower.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
