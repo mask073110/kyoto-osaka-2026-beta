@@ -205,6 +205,10 @@ const POI_PHOTOS={
 "難波・千日前":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Osaka_sennichimae_in_namba.JPG/1280px-Osaka_sennichimae_in_namba.JPG",
 "日本橋":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Osaka_Otaroad.jpg/1024px-Osaka_Otaroad.jpg",
 "日本橋動漫・扭蛋":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Osaka_Otaroad.jpg/1024px-Osaka_Otaroad.jpg",
+"清水寺｜和服人像":"https://www.kiyomizudera.or.jp/assets/img/learn/mainhall/main_01.jpg",
+"二年坂・三年坂｜街景":"https://www.orixhotelsandresorts.com/uploads/2023/03/845d9eb1f2c40a2bcc44ad4d2770493e.jpg",
+"三年坂・二年坂":"https://www.orixhotelsandresorts.com/uploads/2023/03/845d9eb1f2c40a2bcc44ad4d2770493e.jpg",
+"祇園・花見小路｜黃昏":"https://assets.st-note.com/img/1638497316546-GtKntA2fgf.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
