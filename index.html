@@ -209,6 +209,11 @@ const POI_PHOTOS={
 "二年坂・三年坂｜街景":"https://www.orixhotelsandresorts.com/uploads/2023/03/845d9eb1f2c40a2bcc44ad4d2770493e.jpg",
 "三年坂・二年坂":"https://www.orixhotelsandresorts.com/uploads/2023/03/845d9eb1f2c40a2bcc44ad4d2770493e.jpg",
 "祇園・花見小路｜黃昏":"https://assets.st-note.com/img/1638497316546-GtKntA2fgf.jpg",
+"八坂塔・高台寺方向":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Yasaka-no-to_Pagoda_and_Sannen_Zaka_Street.jpg/1280px-Yasaka-no-to_Pagoda_and_Sannen_Zaka_Street.jpg",
+"八坂塔｜壓縮構圖":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Yasaka-no-to_Pagoda_and_Sannen_Zaka_Street.jpg/1280px-Yasaka-no-to_Pagoda_and_Sannen_Zaka_Street.jpg",
+"四条河原町夜景":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Takashimaya_Kyoto.jpg/1280px-Takashimaya_Kyoto.jpg",
+"寺町・新京極街拍":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
+"寺町・新京極商店街":"https://www.kyoto-teramachi.or.jp/wp/wp-content/uploads/2020/03/0047.jpg",
 };
 function stationPhoto(x){let u=POI_PHOTOS[x.name]||"";if(!u)return '<div class="nearphoto-wrap photo-unavailable no-photo"><div class="no-photo-text">目前沒有確認過的店家照片</div></div>';return '<div class="nearphoto-wrap"><img class="nearpage-photo" src="'+esc(u)+'" alt="'+esc(x.name)+'" loading="lazy" referrerpolicy="no-referrer" onerror="stationPhotoFallback(this)"></div>'}
 function stationPhotoFallback(img){let w=img.closest(".nearphoto-wrap");if(w){w.classList.add("photo-unavailable","no-photo");w.innerHTML='<div class="no-photo-text">店家照片暫時無法載入</div>'}}
