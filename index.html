@@ -101,11 +101,18 @@ body{font-size:16px}.top{font-size:13px}.eyebrow{font-size:12px}.hero p{font-siz
 .contact-link{display:inline-flex;align-items:center;min-height:38px;padding:7px 10px;border:1px solid #d9c9b9;border-radius:10px;background:#fff;color:var(--ink);font-size:12px;font-weight:800;text-decoration:none}
 .reserve-link{background:#fff7ef}
 .detail-contact-row:has(.contact-actions:empty){display:none}
-</style><style>.contact-none{font-size:11px;color:#8b7b6d;line-height:1.45}</style><style>.nearphoto-wrap.no-photo{min-height:92px!important;height:92px!important;background:#f3eee7!important;border:1px dashed #d9cfc4!important;display:grid!important;place-items:center!important}.no-photo-text{position:static;padding:14px;text-align:center;color:#9a8d80;font-size:11px;font-weight:700;line-height:1.6;overflow-wrap:anywhere;max-width:100%}</style><style>.nearphoto-wrap .nearpage-photo[src$="takamatsu-kyoto-station.png"]{height:230px;object-fit:contain;padding:10px;content-visibility:visible}</style><style>
+</style><style>.contact-none{font-size:11px;color:#8b7b6d;line-height:1.45}</style><style>.nearphoto-wrap .nearpage-photo[src$="takamatsu-kyoto-station.png"]{height:230px;object-fit:contain;padding:10px;content-visibility:visible}</style><style>
 /* FINAL no-photo cleanup: no empty photo frames in food/nearby or station-nearby browsing */
 .foodcard>.nearphoto-wrap,.foodcard>.foodphoto,.foodcard>.no-photo,.foodcard>.photo-unavailable,
 .nearpage-list .nearphoto-wrap,.nearpage-list .nearpage-photo,.nearpage-list .no-photo,.nearpage-list .photo-unavailable,
 #stationDetail .nearphoto-wrap,#stationDetail .nearpage-photo,#stationDetail .no-photo,#stationDetail .photo-unavailable{display:none!important;height:0!important;min-height:0!important;max-height:0!important;margin:0!important;padding:0!important;border:0!important;background:none!important;overflow:hidden!important}
+</style><style id="final-no-photo-placeholder">
+/* Food/Nearby no-image mode: remove all legacy image/placeholder containers */
+.foodcard .nearphoto-wrap,.foodcard .foodphoto,.foodcard .nearpage-photo,
+.nearpage-list .nearphoto-wrap,.nearpage-list .nearpage-photo,
+.detailpage>.nearphoto-wrap,
+.nearphoto-wrap.no-photo,.nearphoto-wrap.photo-unavailable,.no-photo,.no-photo-text,
+.photo-fallback-label,.photo-badge{display:none!important;height:0!important;min-height:0!important;max-height:0!important;margin:0!important;padding:0!important;border:0!important;background:none!important;overflow:hidden!important}
 </style></head><body><div id="app" class="app viewport"><main class="fallback"><h1>京都・大阪 秋旅</h1><p>2026.11.19 — 11.24｜8 人攝影旅行</p><p>行程介面載入中。若互動程式發生錯誤，此基本資訊仍會保留，不再顯示全空白頁。</p></main></div>
 <script>
 const DAYS=[
