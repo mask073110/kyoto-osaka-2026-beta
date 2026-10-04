@@ -79,6 +79,9 @@ body{font-size:16px}.top{font-size:13px}.eyebrow{font-size:12px}.hero p{font-siz
 
 /* Compact DAY1 A/B/C route cards: preserve route titles, remove oversized nested layout */
 .evening-choice .evening-grid{display:grid;gap:10px}.evening-choice button.evening-route{display:grid!important;grid-template-columns:54px minmax(0,1fr) 22px!important;gap:12px!important;align-items:center!important;width:100%!important;min-height:0!important;height:auto!important;padding:14px 12px!important;text-align:left!important}.evening-choice button.evening-route>span:nth-child(2){display:block!important;min-width:0}.evening-choice button.evening-route b{display:block!important;font-size:14px!important;line-height:1.35!important}.evening-choice button.evening-route small{display:block!important;margin-top:4px!important;font-size:11px!important;line-height:1.45!important}.evening-choice .route-letter{width:46px!important;height:46px!important;display:grid!important;place-items:center!important}.evening-choice .route-go{position:static!important;transform:none!important;justify-self:end!important;font-size:26px!important}.evening-choice .evening-select{display:none!important}
+
+/* No-image mode: remove image placeholders themselves from Food & Nearby cards */
+.foodnear .foodphoto,.foodnear .nearphoto-wrap,.foodnear .nearpage-photo,.foodnear .no-photo,.foodnear .photo-unavailable{display:none!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important}
 </style><style>.video-badge{display:inline-flex;align-items:center;margin-right:5px;padding:2px 6px;border-radius:999px;background:#fff2e8;font-size:11px;font-weight:800;line-height:1.45;white-space:nowrap}.station-item b{line-height:1.45}</style><style>
 .station-info-video{display:none}
 .station-item.show-video-detail .station-info-video{display:block}
