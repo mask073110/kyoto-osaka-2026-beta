@@ -389,11 +389,13 @@ async function recognizeAddPlace(files){
 }
 function parseMapScreenshot(raw,category){
   let lines=raw.split(/\n+/).map(x=>x.replace(/\s+/g," ").trim()).filter(x=>x.length>1);
-  let chrome=/ChatGPT|5G|LTE|Safari|google\.com|搜尋或輸入|Search or enter|返回|戻る|共有|分享|保存|儲存|造訪|Visit|Share|Save|^\d{1,2}:\d{2}$/i;
+  let chrome=/ChatGPT|5G|LTE|Safari|google\.com|搜尋或輸入|Search or enter|返回|戻る|共有|分享|保存|儲存|造訪|Visit|Share|Save|AI 模式|購物|新聞|短片|全部|地圖|圖片|^\d{1,2}:\d{2}$/i;
   let junk=/^(Google|Maps|搜尋|Search|路線|附近|總覽|相片|菜單|評論|網站|電話|地址|Directions|Nearby|Overview|Photos|Reviews)$/i;
   let clean=lines.filter(x=>!chrome.test(x)&&!junk.test(x));
   const known=["通天閣","清水寺","伏見稻荷大社","伏見稲荷大社","金閣寺","京都塔","京都タワー","東寺","下鴨神社","勝尾寺","箕面大滝","箕面瀑布","道頓堀","心齋橋","心斎橋","新世界","四天王寺","太陽之塔","太陽の塔","錦市場","祇園","嵐山","二年坂","三年坂","八坂神社","八坂庚申堂","安井金比羅宮","teamLab Biovortex Kyoto"];
-  let hits=known.filter(k=>raw.includes(k)).map(k=>({name:k==="伏見稲荷大社"?"伏見稻荷大社":k==="京都タワー"?"京都塔":k==="心斎橋"?"心齋橋":k,score:98,why:"截圖文字直接出現地點名稱"}));
+  let hits=known.filter(k=>raw.includes(k)).map(k=>({name:k==="伏見稲荷大社"?"伏見稻荷大社":k==="京都タワー"?"京都塔":k==="心斎橋"?"心齋橋":k,score:99,why:"截圖文字直接出現地點名稱"}));
+  let placeHeading=clean.find(x=>x.length>=2&&x.length<=30&&/寺|神社|塔|市場|城|公園|館|博物館|通天閣|新世界|道頓堀|心齋橋|心斎橋/.test(x)&&!/搜尋|評論|地圖|圖片|新聞|購物/.test(x));
+  if(placeHeading)hits.push({name:placeHeading,score:96,why:"Google 地點標題"});
   let titleLines=clean.filter(x=>x.length>=3&&x.length<=100&&!/〒|電話|營業|営業|公里|分鐘|小時|評論|レビュー|http|www\./i.test(x));
   function extractTitle(x){
     let y=x.replace(/^[^一-龯ぁ-んァ-ヶA-Za-z0-9%]+/,"").trim();
@@ -406,7 +408,9 @@ function parseMapScreenshot(raw,category){
   let seen=new Set(),candidates=hits.filter(x=>{let k=x.name.toLowerCase();if(seen.has(k))return false;seen.add(k);return true}).sort((a,b)=>b.score-a.score).slice(0,3);
   let best=candidates[0]||null;
   let rating=(raw.match(/(?:^|\s)([1-5][\.,]\d)\s*(?:★|\(|\d|顆星)/m)||[])[1]||"";
-  let address=clean.find(x=>/〒\s*\d{3}|(?:京都|大阪)(?:府|市)|Japan|日本.*(?:府|市|区|區|町|丁目)/.test(x)&&(!best||x!==best.name))||"";
+  if(!rating){let rm=raw.match(/([1-5][\.,]\d)\s*[★☆]/);rating=rm?rm[1]:""}
+  let address=clean.find(x=>/〒\s*\d{3}|(?:京都|大阪)(?:府|市)|Japan|日本.*(?:府|市|区|區|町|丁目)/.test(x)&&(!best||x!==best.name)&&x.length<90&&!/AI 模式|購物|新聞|短片/.test(x))||"";
+  address=address.replace(/^[QO0]\s*/,"").replace(/\s*[\)）]+$/,"").trim();
   let hours=clean.find(x=>/(營業|営業|開店|閉店|休業|休息).{0,30}\d{1,2}[:：]\d{2}/.test(x))||"";
   let confidence=best?Math.min(99,best.score+(address?3:0)+(rating?2:0)):20;
   return {name:best?best.name:"未能可靠辨識名稱",category,rating,address,hours,raw,confidence,candidates}
