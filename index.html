@@ -49,10 +49,9 @@ body{font-size:16px}.top{font-size:13px}.eyebrow{font-size:12px}.hero p{font-siz
 
 /* Route card rebuild from travel-agency confirmation */
 .official-route-note{margin:10px 0 16px;padding:10px 12px;border-radius:12px;background:#f5efe7;color:#78685b;font-size:12px;line-height:1.5}.route-list{display:grid;gap:10px}.route-card{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;align-items:start;padding:15px 14px;border:1px solid var(--line);border-radius:16px;background:#fffdf9;box-shadow:0 5px 18px rgba(55,43,34,.045)}.route-step{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#eee4d8;color:#7c5c4d;font-size:11px;font-weight:700}.route-main{min-width:0}.route-time{font-size:11px;letter-spacing:.04em;color:#9a8879;margin-bottom:4px}.route-main h3{margin:0;font-size:15px;line-height:1.5;color:var(--ink);font-weight:650}
-/* NO-PHOTO MODE 2026-10-04 */
-/* Hide all photographic media while preserving itinerary, Firebase, ETA, maps, voting and local data. */
-img,.foodphoto,.nearphoto-wrap,.nearpage-photo,.photo-badge,.no-photo{display:none!important}
-.hero{background-image:none!important;background:#6f6258!important;height:205px}
+/* FOOD-NEARBY NO-PHOTO MODE 2026-10-04 */
+/* Hide only food/nearby card imagery; keep itinerary/hero and all other visuals intact. */
+.foodphoto,.nearphoto-wrap,.nearpage-photo,.photo-badge,.no-photo{display:none!important}
 .nearpage-list .station-item>div:first-child{display:block!important;width:100%!important}
 .nearpage-list .station-item b,.nearpage-list .station-item small{display:block!important}
 .detailpage>.nearphoto-wrap{display:none!important;margin:0!important}
