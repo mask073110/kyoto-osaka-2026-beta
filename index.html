@@ -389,17 +389,21 @@ async function recognizeAddPlace(files){
 }
 function parseMapScreenshot(raw,category){
   let lines=raw.split(/\n+/).map(x=>x.replace(/\s+/g," ").trim()).filter(x=>x.length>1);
+  let chrome=/ChatGPT|^[<>‹›].*5G|^\d{1,2}:\d{2}$|google\.com|Safari|戻る|戻|共有|保存|造訪|Visit|Share|Save/i;
   let junk=/^(Google|Maps|搜尋|Search|路線|儲存|附近|分享|總覽|相片|菜單|評論|營業中|已歇業|網站|電話|地址|Directions|Save|Nearby|Share|Overview|Photos|Reviews)$/i;
-  let candidates=lines.filter(x=>!junk.test(x)&&!/^\d{1,2}:\d{2}/.test(x)&&!/^\d+(\.\d+)?\s*[★☆]/.test(x)&&!/^\d+[\s,]*則/.test(x));
-  let name=candidates.find(x=>x.length>=2&&x.length<=60&&!/公里|分鐘|小時|營業|星期|週[一二三四五六日]|〒|電話|http|www\.|評論|星/.test(x))||"辨識到的地點";
+  let clean=lines.filter(x=>!chrome.test(x)&&!junk.test(x));
+  let candidates=clean.filter(x=>x.length>=2&&x.length<=80&&!/^\d{1,2}:\d{2}/.test(x)&&!/^\d+(\.\d+)?\s*[★☆]/.test(x)&&!/公里|分鐘|小時|營業|星期|週[一二三四五六日]|〒|電話|http|www\.|評論|星/.test(x));
+  let titleLike=candidates.filter(x=>!/完整指南|必看|重點|美食|住宿|周邊|一篇掌握|GUIDE|指南|散策|去趣/.test(x));
+  let name=(titleLike.find(x=>/[一-龯ぁ-んァ-ヶ]/.test(x)&&x.length<=32)||candidates.find(x=>/[一-龯ぁ-んァ-ヶ]/.test(x)&&x.length<=40)||"").replace(/^[<›‹>\s]+/,"").trim();
   let rating=(raw.match(/(?:^|\s)([1-5][\.,]\d)\s*(?:★|\(|\d)/m)||[])[1]||"";
-  let address=lines.find(x=>/〒\s*\d{3}|京都|大阪|Japan|日本|府|市|区|區|町|丁目/.test(x)&&x!==name)||"";
-  let hours=lines.find(x=>/營業|営業|開店|閉店|休業|休息|\d{1,2}:\d{2}/.test(x))||"";
-  return {name,category,rating,address,hours,raw}
+  let address=clean.find(x=>/〒\s*\d{3}|京都|大阪|Japan|日本|府|市|区|區|町|丁目/.test(x)&&x!==name)||"";
+  let hours=clean.find(x=>/營業|営業|開店|閉店|休業|休息/.test(x)&&/\d{1,2}[:：]\d{2}/.test(x))||"";
+  let confidence=name?((address||rating)?85:60):25;
+  return {name:name||"未能可靠辨識名稱",category,rating,address,hours,raw,confidence}
 }
 function showRecognitionResult(r,raw){
   let panel=document.querySelector("#detail .panel");if(!panel)return;
-  panel.innerHTML='<div class="add-day">DAY '+(day+1)+' · '+DAYS[day].date+'</div><div class="recognition-ok">✓ 照片辨識完成</div><label class="small">辨識名稱</label><input id="ocrName" class="add-input" value="'+attr(r.name)+'"><div class="ocr-result-grid"><div><b>類型</b><span>'+esc(r.category)+'</span></div><div><b>評分</b><span>'+(r.rating?esc(r.rating):"截圖未辨識")+'</span></div><div class="wide"><b>位置</b><span>'+(r.address?esc(r.address):"截圖未辨識")+'</span></div><div class="wide"><b>營業資訊</b><span>'+(r.hours?esc(r.hours):"截圖未辨識")+'</span></div></div><details class="ocr-raw"><summary>查看辨識原文</summary><pre>'+esc(raw)+'</pre></details><div class="status">請確認名稱是否正確；加入後會使用目前美食周邊的同款卡片，原始截圖不會顯示在卡片上。</div><button class="btn primary add-save" onclick="confirmRecognizedPlace()">確認加入 DAY '+(day+1)+'</button><button class="btn" onclick="closeDetail();openAddPlace()">重新選擇照片</button>';
+  panel.innerHTML='<div class="add-day">DAY '+(day+1)+' · '+DAYS[day].date+'</div><div class="recognition-ok">✓ 照片辨識完成</div><div class="status" style="margin-bottom:12px">辨識信心：'+(r.confidence||0)+'%。一般網頁／搜尋結果截圖可能只有文章標題，未必含正式 Google Maps 地點資料。</div><label class="small">辨識名稱</label><input id="ocrName" class="add-input" value="'+attr(r.name)+'"><div class="ocr-result-grid"><div><b>類型</b><span>'+esc(r.category)+'</span></div><div><b>評分</b><span>'+(r.rating?esc(r.rating):"截圖未辨識")+'</span></div><div class="wide"><b>位置</b><span>'+(r.address?esc(r.address):"截圖未辨識")+'</span></div><div class="wide"><b>營業資訊</b><span>'+(r.hours?esc(r.hours):"截圖未辨識")+'</span></div></div><details class="ocr-raw"><summary>查看辨識原文</summary><pre>'+esc(raw)+'</pre></details><div class="status">請確認名稱是否正確；加入後會使用目前美食周邊的同款卡片，原始截圖不會顯示在卡片上。</div><button class="btn primary add-save" onclick="confirmRecognizedPlace()">確認加入 DAY '+(day+1)+'</button><button class="btn" onclick="closeDetail();openAddPlace()">重新選擇照片</button>';
   window.__ocrPlace=r
 }
 function confirmRecognizedPlace(){
