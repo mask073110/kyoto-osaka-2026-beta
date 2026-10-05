@@ -1,20 +1,6 @@
 {
   "items": [
     {
-      "id": "1791177085201-g1qwnm",
-      "name": "33333",
-      "category": "",
-      "place": "",
-      "price": "",
-      "qty": "",
-      "note": "33333",
-      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791177085201-g1qwnm.jpg?v=1791177087212",
-      "photoPublicId": "assets/shopping/1791177085201-g1qwnm.jpg",
-      "done": false,
-      "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T05:11:27.310Z"
-    },
-    {
       "id": "1791177113378-knctzd",
       "name": "這個要買",
       "category": "",
@@ -29,5 +15,5 @@
       "uploadedAt": "2026-10-05T05:11:55.387Z"
     }
   ],
-  "updatedAt": "2026-10-05T05:12:12.152Z"
+  "updatedAt": "2026-10-05T05:12:14.618Z"
 }
