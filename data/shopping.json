@@ -10,12 +10,18 @@
       "note": "11111111",
       "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791182221967-7z3c01.jpg?v=1791182224459",
       "photoPublicId": "assets/shopping/1791182221967-7z3c01.jpg",
-      "done": true,
+      "done": false,
       "uploadedBy": "Noah",
       "uploadedAt": "2026-10-05T06:37:04.597Z",
       "likes": [],
-      "comments": []
+      "comments": [
+        {
+          "user": "Noah",
+          "text": "我也要",
+          "time": "2026-10-05T06:37:35.010Z"
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-10-05T06:37:16.770Z"
+  "updatedAt": "2026-10-05T06:37:35.689Z"
 }
