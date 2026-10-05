@@ -1,19 +1,4 @@
 {
-  "items": [
-    {
-      "id": "1791178717040-o4aoa3",
-      "name": "111111",
-      "category": "",
-      "place": "",
-      "price": "",
-      "qty": "",
-      "note": "111111",
-      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791178717040-o4aoa3.jpg?v=1791178719369",
-      "photoPublicId": "assets/shopping/1791178717040-o4aoa3.jpg",
-      "done": false,
-      "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T05:38:39.570Z"
-    }
-  ],
-  "updatedAt": "2026-10-05T05:38:40.259Z"
+  "items": [],
+  "updatedAt": "2026-10-05T05:38:44.863Z"
 }
