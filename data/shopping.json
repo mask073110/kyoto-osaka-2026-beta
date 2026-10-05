@@ -50,7 +50,24 @@
       "uploadedAt": "2026-10-05T08:45:41.292Z",
       "likes": [],
       "comments": []
+    },
+    {
+      "id": "1791190153968-y0o7d1",
+      "name": "333333",
+      "category": "",
+      "place": "",
+      "price": "",
+      "qty": "",
+      "note": "333333",
+      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791190153968-y0o7d1.jpg?v=1791190156100",
+      "photoPublicId": "assets/shopping/1791190153968-y0o7d1.jpg",
+      "tripDay": 1,
+      "done": false,
+      "uploadedBy": "Noah",
+      "uploadedAt": "2026-10-05T08:49:16.196Z",
+      "likes": [],
+      "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T08:49:07.648Z"
+  "updatedAt": "2026-10-05T08:49:16.772Z"
 }
