@@ -1,20 +1,6 @@
 {
   "items": [
     {
-      "id": "1791177615434-6t9pmm",
-      "name": "12121212",
-      "category": "",
-      "place": "",
-      "price": "",
-      "qty": "",
-      "note": "12121212",
-      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791177615434-6t9pmm.jpg?v=1791177617339",
-      "photoPublicId": "assets/shopping/1791177615434-6t9pmm.jpg",
-      "done": false,
-      "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T05:20:17.440Z"
-    },
-    {
       "id": "1791177676923-e2j0dx",
       "name": "Wwwwwww",
       "category": "",
@@ -29,5 +15,5 @@
       "uploadedAt": "2026-10-05T05:21:19.921Z"
     }
   ],
-  "updatedAt": "2026-10-05T05:21:35.727Z"
+  "updatedAt": "2026-10-05T05:23:39.439Z"
 }
