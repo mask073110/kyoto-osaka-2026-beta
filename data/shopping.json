@@ -16,7 +16,24 @@
       "uploadedAt": "2026-10-05T07:21:09.475Z",
       "likes": [],
       "comments": []
+    },
+    {
+      "id": "1791188946602-2rsrtd",
+      "name": "限量的",
+      "category": "",
+      "place": "",
+      "price": "",
+      "qty": "",
+      "note": "限量的",
+      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791188946602-2rsrtd.jpg?v=1791188949442",
+      "photoPublicId": "assets/shopping/1791188946602-2rsrtd.jpg",
+      "tripDay": 1,
+      "done": false,
+      "uploadedBy": "Noah",
+      "uploadedAt": "2026-10-05T08:29:09.545Z",
+      "likes": [],
+      "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T07:37:51.796Z"
+  "updatedAt": "2026-10-05T08:29:10.142Z"
 }
