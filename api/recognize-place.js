@@ -21,10 +21,18 @@ export default async function handler(req,res){
       const m=dataUrl.match(/^data:(image\/(?:jpeg|png|webp));base64,(.+)$/i);
       parts.push({inline_data:{mime_type:m[1].toLowerCase(),data:m[2]}});
     }
-    const endpoint="https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent";
-    const rr=await fetch(endpoint,{method:"POST",headers:{"x-goog-api-key":apiKey,"Content-Type":"application/json"},body:JSON.stringify({contents:[{role:"user",parts}],generationConfig:{temperature:0.1,maxOutputTokens:700,responseMimeType:"application/json"}})});
-    const data=await rr.json();
-    if(!rr.ok)return res.status(502).json({error:"Gemini Vision service failed",detail:data?.error?.message||rr.status});
+    const models=["gemini-3.8-flash","gemini-3.6-flash","gemini-3.5-flash"];
+    let rr,data,lastDetail="";
+    for(const model of models){
+      const endpoint=`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+      rr=await fetch(endpoint,{method:"POST",headers:{"x-goog-api-key":apiKey,"Content-Type":"application/json"},body:JSON.stringify({contents:[{role:"user",parts}],generationConfig:{temperature:0.1,maxOutputTokens:700,responseMimeType:"application/json",thinkingConfig:{thinkingLevel:"low"}}})});
+      data=await rr.json();
+      if(rr.ok)break;
+      lastDetail=data?.error?.message||String(rr.status);
+      const retryable=rr.status===429||rr.status===503||/high demand|overloaded|temporar/i.test(lastDetail);
+      if(!retryable)break;
+    }
+    if(!rr?.ok)return res.status(502).json({error:"Gemini Vision service failed",detail:lastDetail||rr?.status||"Unknown Gemini error"});
     let text=(data?.candidates?.[0]?.content?.parts||[]).map(p=>p.text||"").join("").trim();
     text=text.replace(/^\`\`\`(?:json)?\s*/i,"").replace(/\s*\`\`\`$/,"");
     const result=JSON.parse(text);
