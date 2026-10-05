@@ -11,7 +11,8 @@ export default async function handler(req,res){
     let body=req.body;
     if(typeof body==="string")body=JSON.parse(body);
     const images=Array.isArray(body?.images)?body.images.slice(0,3):[];
-    if(!images.length)return res.status(400).json({error:"No image supplied"});
+    const sharedUrl=typeof body?.sharedUrl==="string"?body.sharedUrl.trim():"";
+    if(!images.length&&!sharedUrl)return res.status(400).json({error:"No image or shared link supplied"});
     if(images.some(x=>typeof x!=="string"||!/^data:image\/(jpeg|png|webp);base64,/i.test(x)||x.length>5_500_000))return res.status(400).json({error:"Unsupported or oversized image"});
     const apiKey=process.env.GEMINI_API_KEY;
     if(!apiKey)return res.status(500).json({error:"Gemini API key unavailable"});
