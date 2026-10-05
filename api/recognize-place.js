@@ -21,7 +21,7 @@ export default async function handler(req,res){
       const m=dataUrl.match(/^data:(image\/(?:jpeg|png|webp));base64,(.+)$/i);
       parts.push({inline_data:{mime_type:m[1].toLowerCase(),data:m[2]}});
     }
-    const endpoint="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
+    const endpoint="https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent";
     const rr=await fetch(endpoint,{method:"POST",headers:{"x-goog-api-key":apiKey,"Content-Type":"application/json"},body:JSON.stringify({contents:[{role:"user",parts}],generationConfig:{temperature:0.1,maxOutputTokens:700,responseMimeType:"application/json"}})});
     const data=await rr.json();
     if(!rr.ok)return res.status(502).json({error:"Gemini Vision service failed",detail:data?.error?.message||rr.status});
