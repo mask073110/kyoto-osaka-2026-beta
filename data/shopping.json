@@ -12,7 +12,10 @@
       "photoPublicId": "assets/shopping/1791179626521-qpemb8.jpg",
       "done": false,
       "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T05:53:48.790Z"
+      "uploadedAt": "2026-10-05T05:53:48.790Z",
+      "likes": [
+        "Noah"
+      ]
     },
     {
       "id": "1791182363408-b4ssdr",
@@ -31,5 +34,5 @@
       "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T06:39:25.844Z"
+  "updatedAt": "2026-10-05T06:46:13.609Z"
 }
