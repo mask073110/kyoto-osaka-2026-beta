@@ -11,7 +11,7 @@
       "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791184867272-w86f8y.jpg?v=1791184869380",
       "photoPublicId": "assets/shopping/1791184867272-w86f8y.jpg",
       "tripDay": 0,
-      "done": false,
+      "done": true,
       "uploadedBy": "Noah",
       "uploadedAt": "2026-10-05T07:21:09.475Z",
       "likes": [],
@@ -52,5 +52,5 @@
       "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T09:54:24.430Z"
+  "updatedAt": "2026-10-05T09:54:32.707Z"
 }
