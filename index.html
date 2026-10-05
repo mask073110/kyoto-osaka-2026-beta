@@ -140,8 +140,8 @@ body{font-size:16px}.top{font-size:13px}.eyebrow{font-size:12px}.hero p{font-siz
 </style><style id="foodnear-delete-style">
 .foodcard .poi-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .foodcard .poi-head h3{flex:1 1 180px;min-width:0}
-.card-delete{appearance:none;border:1px solid rgba(155,62,49,.35);background:rgba(155,62,49,.08);color:#9b3e31;border-radius:9px;padding:7px 10px;margin:0;font-size:14px;font-weight:700;line-height:1;cursor:pointer;white-space:nowrap}
-.card-delete:active{transform:scale(.96);background:rgba(155,62,49,.16)}
+.card-actions{display:flex;gap:8px;margin-left:auto}.card-hide,.card-delete{appearance:none;border:0;border-radius:18px;padding:12px 13px;margin:0;font-size:12px;font-weight:700;line-height:1;cursor:pointer;white-space:nowrap;min-height:44px}.card-hide{background:#b9b9b9;color:#fff}.card-delete{background:#ff3547;color:#fff}
+.card-hide:active,.card-delete:active{transform:scale(.95);filter:brightness(.94)}
 .deleting-card{animation:deleteCardOut .42s ease forwards;pointer-events:none}.delete-toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);z-index:9999;background:#4f433b;color:#fff;padding:11px 18px;border-radius:999px;font-size:13px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.18);animation:deleteToast 1.8s ease forwards}@keyframes deleteCardOut{0%{opacity:1;transform:translateX(0);max-height:800px}45%{opacity:.25;transform:translateX(35px) scale(.98)}100%{opacity:0;transform:translateX(70px) scale(.96);max-height:0;margin:0;padding-top:0;padding-bottom:0;border-width:0;overflow:hidden}}@keyframes deleteToast{0%{opacity:0;transform:translate(-50%,12px)}12%,78%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,8px)}}
 </style><style id="add-place-style">
 .foodnear-note{align-items:center}.add-place-btn{border:1px solid #b24d3c;background:#b24d3c;color:#fff;border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700;white-space:nowrap}
@@ -391,6 +391,7 @@ function customFoodNear(){try{return JSON.parse(localStorage.getItem(customFoodN
 function saveCustomFoodNear(item){let a=customFoodNear();a.push(item);localStorage.setItem(customFoodNearKey(),JSON.stringify(a));NEAR_META[item.name]=[item.recommend||item.category,item.location||"位置／營業待補",item.stay||"10–30分",item.intro||""];render("fade")}
 function hiddenFoodNearKey(){return "hiddenFoodNearDay"+day}
 function hiddenFoodNear(){try{return JSON.parse(localStorage.getItem(hiddenFoodNearKey())||"[]")}catch(e){return []}}
+function hideFoodNear(name){let btn=event?.currentTarget,card=btn?.closest(".foodcard");if(card)card.classList.add("deleting-card");let a=hiddenFoodNear();if(!a.includes(name))a.push(name);localStorage.setItem(hiddenFoodNearKey(),JSON.stringify(a));let toast=document.createElement("div");toast.className="delete-toast";toast.textContent="已隱藏「"+name+"」";document.body.appendChild(toast);setTimeout(()=>{toast.remove();render("fade")},520)}
 function removeFoodNear(name){if(!confirm("要從 DAY"+(day+1)+" 的美食周邊刪除「"+name+"」嗎？"))return;let btn=event?.currentTarget,card=btn?.closest(".foodcard");if(card)card.classList.add("deleting-card");let a=hiddenFoodNear();if(!a.includes(name))a.push(name);localStorage.setItem(hiddenFoodNearKey(),JSON.stringify(a));let toast=document.createElement("div");toast.className="delete-toast";toast.textContent="✓ 已刪除「"+name+"」";document.body.appendChild(toast);setTimeout(()=>{toast.remove();render("fade")},520)}
 let cloudShopping=null,shoppingCloudReady=false;
 function shoppingItems(){if(Array.isArray(cloudShopping))return cloudShopping;try{return JSON.parse(localStorage.getItem("tripShoppingList")||"[]")}catch(e){return []}}
