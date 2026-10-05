@@ -14,9 +14,7 @@
       "done": true,
       "uploadedBy": "Noah",
       "uploadedAt": "2026-10-05T07:21:09.475Z",
-      "likes": [
-        "Noah"
-      ],
+      "likes": [],
       "comments": []
     },
     {
@@ -54,5 +52,5 @@
       "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T09:55:49.061Z"
+  "updatedAt": "2026-10-05T09:55:50.049Z"
 }
