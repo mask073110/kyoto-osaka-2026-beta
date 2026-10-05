@@ -1,38 +1,6 @@
 {
   "items": [
     {
-      "id": "1791182832664-zrscgz",
-      "name": "1111111111",
-      "category": "",
-      "place": "",
-      "price": "",
-      "qty": "",
-      "note": "1111111111",
-      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791182832664-zrscgz.jpg?v=1791182834580",
-      "photoPublicId": "assets/shopping/1791182832664-zrscgz.jpg",
-      "done": false,
-      "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T06:47:14.686Z",
-      "likes": [],
-      "comments": [
-        {
-          "user": "Noah",
-          "text": "33333",
-          "time": "2026-10-05T06:53:20.206Z"
-        },
-        {
-          "user": "Noah",
-          "text": "33333",
-          "time": "2026-10-05T06:53:22.307Z"
-        },
-        {
-          "user": "Noah",
-          "text": "3333",
-          "time": "2026-10-05T06:53:24.164Z"
-        }
-      ]
-    },
-    {
       "id": "1791182862558-hycnu6",
       "name": "2222222222222",
       "category": "",
@@ -49,5 +17,5 @@
       "comments": []
     }
   ],
-  "updatedAt": "2026-10-05T07:12:26.487Z"
+  "updatedAt": "2026-10-05T07:12:31.236Z"
 }
