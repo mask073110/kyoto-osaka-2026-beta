@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "1791175719532-v6b7jq",
+      "name": "待買商品",
+      "category": "",
+      "place": "",
+      "price": "",
+      "qty": "",
+      "note": "",
+      "photo": "https://res.cloudinary.com/zekmv6bu/image/upload/v1791175720/yzwzhif0xbh3rayzvasl.jpg",
+      "photoPublicId": "yzwzhif0xbh3rayzvasl",
+      "done": false,
+      "uploadedBy": "Noah",
+      "uploadedAt": "2026-10-05T04:48:41.816Z"
+    }
+  ],
+  "updatedAt": "2026-10-05T04:48:42.537Z"
+}
