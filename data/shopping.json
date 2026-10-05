@@ -1,20 +1,6 @@
 {
   "items": [
     {
-      "id": "1791177233583-cu8a3e",
-      "name": "全家才買的到",
-      "category": "",
-      "place": "",
-      "price": "",
-      "qty": "",
-      "note": "全家才買的到",
-      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791177233583-cu8a3e.jpg?v=1791177235621",
-      "photoPublicId": "assets/shopping/1791177233583-cu8a3e.jpg",
-      "done": false,
-      "uploadedBy": "Noah",
-      "uploadedAt": "2026-10-05T05:13:55.722Z"
-    },
-    {
       "id": "1791177433639-vlk0z0",
       "name": "22222222",
       "category": "",
@@ -43,5 +29,5 @@
       "uploadedAt": "2026-10-05T05:18:25.119Z"
     }
   ],
-  "updatedAt": "2026-10-05T05:18:35.270Z"
+  "updatedAt": "2026-10-05T05:18:40.523Z"
 }
