@@ -72,8 +72,14 @@
       "uploadedBy": "Noah",
       "uploadedAt": "2026-10-07T02:34:46.834Z",
       "likes": [],
-      "comments": []
+      "comments": [
+        {
+          "user": "Noah",
+          "text": "想要",
+          "time": "2026-10-07T02:35:05.230Z"
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-10-07T02:34:47.391Z"
+  "updatedAt": "2026-10-07T02:35:05.230Z"
 }
