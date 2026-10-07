@@ -56,7 +56,24 @@
         "Noah"
       ],
       "comments": []
+    },
+    {
+      "id": "1791340484310-l06t0n",
+      "name": "待買商品",
+      "category": "",
+      "place": "",
+      "price": "",
+      "qty": "",
+      "note": "",
+      "photo": "https://raw.githubusercontent.com/mask073110/kyoto-osaka-2026-beta/main/assets/shopping/1791340484310-l06t0n.jpg?v=1791340486647",
+      "photoPublicId": "assets/shopping/1791340484310-l06t0n.jpg",
+      "tripDay": 4,
+      "done": false,
+      "uploadedBy": "Noah",
+      "uploadedAt": "2026-10-07T02:34:46.834Z",
+      "likes": [],
+      "comments": []
     }
   ],
-  "updatedAt": "2026-10-06T09:06:40.633Z"
+  "updatedAt": "2026-10-07T02:34:47.391Z"
 }
